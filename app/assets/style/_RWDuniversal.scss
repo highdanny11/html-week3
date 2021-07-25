@@ -1,0 +1,25 @@
+.latopHide {
+  @include laptop{
+    display: none;
+  }
+}
+.latopShow{
+  @include laptop{
+    display: block;
+  }
+}
+.latopFlexShow{
+  @include laptop{
+    display: flex;
+  }
+}
+.iphadHide {
+  @include ipad {
+    display: none;
+  }
+}
+.ipadShow {
+  @include ipad {
+    display: block;
+  }
+}

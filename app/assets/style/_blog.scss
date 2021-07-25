@@ -1,0 +1,144 @@
+.searchbar {
+  padding: 12px 0;
+  background-color: $secondary;
+  @include laptop {
+    padding: 16px 0;
+  }
+  @include ipad {
+    display: none;
+  }
+}
+.searchbar-wrap {
+  padding: 0 15px;
+  @include laptop {
+    padding: 0 39px;
+  }
+}
+.news-list {
+  display: flex;
+  align-items: center;
+}
+.news-list li > a {
+  font-size: 20px;
+  line-height: 24px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding-right: 48px;
+  @include laptop {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 32px;
+  }
+}
+.serach {
+  display: block;
+  text-decoration: none;
+}
+.blog-wrap {
+  padding-top: 40px;
+  padding-bottom: 160px;
+  @include laptop {
+    border-top: 32px;
+    padding-bottom: 96px;
+  }
+  @include ipad {
+    padding-top: 28px;
+    padding-bottom: 56px;
+  }
+}
+.planning-list {
+  padding-bottom: 36px;
+  @include laptop {
+    padding: 0 24px;
+    padding-bottom: 40px;
+  }
+  @include ipad {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}
+.planning-item {
+  display: flex;
+  margin-bottom: 60px;
+  @include laptop {
+    margin-bottom: 24px;
+  }
+  @include ipad {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+.planning-item-image {
+  display: block;
+  padding: 0 15px;
+  width: 665px;
+  @include laptop {
+    width: 50%;
+  }
+  @include ipad {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+.planning-article {
+  width: 475px;
+  @include desktop {
+    width: 100%;
+  }
+  @include ipad {
+    padding: 0 15px;
+    width: 100%;
+  }
+  & .planning-article-title {
+    color: $secondary;
+    @include laptop {
+      font-size: 20px;
+      line-height: 29px;
+    }
+    @include ipad {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+.planning-article-secondtitle {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+  @include mb-rwd(24px, 32px, 20px);
+  @include laptop {
+    font-size: 16px;
+  }
+  @include ipad {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+}
+.planning-article-main {
+  font-size: 20px;
+  line-height: 30px;
+  color: #555555;
+  @include laptop {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.planning-article-main >a {
+  text-decoration: none;
+  color: #555555;
+  font-weight: bold;
+  @include laptop {
+    display: inline;
+  }
+}
+.more {
+  display: block;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: right;
+  text-decoration: none;
+  font-family: 'Roboto';
+}

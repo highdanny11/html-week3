@@ -1,0 +1,247 @@
+.classify {
+  display: flex;
+}
+.classify-tiem {
+  width: 100%;
+}
+.classify-tiem > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  padding: 26px 0px;
+  font-size: 32px;
+  line-height: 50px;
+  @include laptop {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 14px 0;
+  }
+  @include ipad {
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  outline: 1px solid #dcdcdc;
+}
+.classify-tiem > a:hover {
+  padding-bottom: 18px;
+  border-bottom: 8px solid $primary;
+  @include laptop {
+    padding-bottom: 10px;
+  }
+  @include ipad {
+    border-bottom: 4px solid $primary;
+    padding-bottom: 2px;
+  }
+}
+.classify-optical,
+.classify-sunglasses,
+.classify-functional {
+  font-size: 48px;
+  @include laptop {
+    font-size: 32px;
+    margin-right: 8px;
+  }
+  @include ipad {
+    font-size: 14px;
+    margin-right: 0px;
+  }
+}
+.adv {
+  display: flex;
+  flex-wrap: wrap;
+}
+.adv-glasses,
+.adv-model {
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 304px;
+}
+.adv-glasses {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-1.png);
+  @include laptop {
+    background-image: url(https://images.unsplash.com/photo-1547104442-9f0af4f37a87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
+  }
+  @include ipad {
+    height: 148px;
+  }
+}
+.adv-model {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-2.png);
+  @include laptop {
+    background-image: url(https://images.unsplash.com/photo-1544825470-60e99eef8a70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80);
+  }
+  @include ipad {
+    height: 148px;
+  }
+}
+.products-wrap {
+    @include wrap (80px,160px,0px);
+    @include laptop {
+        @include wrap (56px,96px,0px);
+    }
+    @include ipad {
+        @include wrap(32px,56px,0px);
+    }
+}
+.products-wrap-3card {
+  @include wrap (80px,96px,0px);
+  @include laptop {
+    padding: 56px 0;
+  }
+  @include ipad {
+    @include wrap(32px,56px,0);
+  }
+}
+.products-title {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 42px;
+  line-height: 63px;
+  @include text-rwd(32px, 48px, 20px, 48px);
+}
+.products-title > span {
+  font-size: 32px;
+  line-height: 48px;
+  @include text-rwd(24px, 36px, 16px, 36px);
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  @include mb-rwd(32px,25px,28px);
+  @include laptop {
+    padding: 0 24px;
+  }
+  @include ipad {
+    padding: 0 ;
+  }
+}
+.products-3card {
+  display: flex;
+  flex-wrap: wrap;
+  @include ipad {
+    padding-bottom: 28px;
+  }
+}
+.product {
+  width: 25%;
+  padding: 0 15px;
+  color: #000;
+  @include mt-rwd(40px,32px,20px);
+  @include mb-rwd (64px,40px,12px);
+  @include laptop {
+    width: 50%;
+  }
+  @include ipad {
+    width: 100%;
+  }
+}
+.product-3card {
+  width: 33.33%;
+  padding: 0 15px;
+  color: #000;
+  @include mt-rwd(40px,32px,20px);
+  @include mb-rwd (64px,40px,12px);
+  @include laptop {
+    width: 50%;
+  }
+  @include ipad {
+    width: 100%;
+  }
+}
+.product-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 164px;
+}
+.product-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto;
+}
+.product-num,
+.product-price {
+  font-size: 24px;
+  line-height: 36px;
+  @include text-rwd(24px, 30px, 16px, 30px);
+}
+.product-price {
+  color: $primary;
+}
+.brown {
+  background-color: #5f3e2d;
+  @include me-rwd(8px, 8px, 4px);
+}
+.coffe {
+  background-color: #b75929;
+}
+.brown,
+.coffe {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+.pages-numbers {
+    justify-content: center;
+    align-items: center;
+    padding:0 15px;
+}
+.pages-numbers li {
+    outline:1px solid #555555;
+}
+.pages-numbers li >a {
+    color: #555555;
+    text-decoration: none;
+}
+.page-number {
+    width: 42px;
+    height: 48px;
+    @include ipad {
+      width: 39px;
+      height: 45px;
+    }
+}
+.page-number >a {
+    display: block;
+    padding: 12px 16px;
+    font-size: 18px;
+    line-height: 27px;
+    @include ipad {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 12px 15px;
+    }
+}
+.page-number:hover {
+    background-color: #000;
+    color: #fff;
+}
+.prePage >a,.nextPage >a {
+  display: block;
+}
+.prePage,.nextPage {
+    width: 81px;
+    text-align: center;
+    padding: 11px 0px;
+    font-size: 19px;
+    line-height: 29px;
+    height: 48px;
+    @include ipad {
+        width: 75px;
+        font-size: 17px;
+        line-height: 26px;
+        height: 45px;
+    }
+}
+.prePage:hover,.nextPage:hover {
+    background-color: #F2F2F2;
+}

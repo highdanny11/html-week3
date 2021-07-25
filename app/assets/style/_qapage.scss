@@ -1,0 +1,74 @@
+.qawrap{
+    padding-top: 96px;
+    padding-bottom: 128px;
+    @include laptop {
+        padding-top: 60px;
+        padding-bottom: 72px;
+    }
+    @include ipad {
+        padding-top: 28px;
+        padding-bottom: 36px;
+    }
+}
+.qalist {
+    padding: 0 15px;
+    @include laptop {
+        padding: 0px 39px;
+    }
+    @include ipad {
+        padding: 0 15px;
+    }
+}
+.qalist >h4 {
+    font-size: 32px;
+    line-height: 63px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 36px;
+    @include laptop {
+        margin-bottom: 32px;
+    }
+    @include ipad {
+        margin-bottom: 24px;
+    }
+}
+.qalist-item {
+    margin-bottom: 32px;
+    color: #000;
+    @include laptop {
+        margin-bottom: 24px;
+    }
+    @include ipad {
+        margin-bottom: 20px;
+    }
+}
+
+.qalist-itemTitle {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    @include ipad {
+        margin-bottom: 8px;
+    }
+}
+.qalist-itemAnswer {
+    width: 83%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    @include laptop {
+        width: 630px;
+        margin: 0  0 0  auto;
+    }
+    @include ipad {
+        width: 100%;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+.qalist-itemAnswer>li {
+    @include ipad {
+        margin-bottom: 21px;
+    }
+}

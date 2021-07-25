@@ -1,0 +1,400 @@
+.banner {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 840px;
+  @include ipad {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-sm.png);
+    height: 394px;
+  }
+}
+.banner-wrap {
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 840px;
+  @include ipad {
+    height: 394px;
+  }
+}
+h3 {
+  font-size: 64px;
+  line-height: 96px;
+  font-weight: bold;
+  text-align: right;
+  @include laptop {
+    @include text-lg;
+  }
+  @include ipad {
+    font-size: 32px;
+  }
+}
+.banner-title span {
+  font-size: 36px;
+  line-height: 54px;
+  @include laptop {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @include ipad {
+    font-size: 16px;
+  }
+}
+.prosfession {
+  background-color: $bgc;
+}
+.profession-wrap {
+  @include wrap(60px, 80px, 0px);
+  @include laptop {
+    padding-bottom: 0;
+  }
+  @include ipad {
+    @include wrap(32px, 8px, 0px);
+  }
+}
+.profession-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include laptop {
+    justify-content: space-around;
+  }
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  @include text-lg;
+  @include laptop {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @include ipad {
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+.profession-card {
+  width: 25%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include laptop {
+    width: 35%;
+    padding: 0 10px;
+  }
+  @include ipad {
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+.profession-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+}
+.img-dollar,
+.img-clock,
+.img-heart {
+  display: block;
+  margin: 0 auto;
+  width: 83.33px;
+}
+.img-glasses {
+  width: 100px;
+}
+.profession-cardTitle {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.profession-card > p {
+  @include text;
+  text-align: left;
+  @include mb-rwd(0px, 56px, 32px);
+}
+.classic {
+  @include wrap(60px, 48px, 15px);
+  @include laptop {
+    @include wrap(40px, 48px, 39px);
+  }
+  @include ipad {
+    padding: 32px 15px;
+  }
+}
+.classic-catena {
+  color: $primary;
+}
+.classic-catena li {
+  display: flex;
+  @include mb-rwd(32px, 8px, 8px);
+}
+.classic-catena li > img {
+  width: 57.5%;
+  @include ipad {
+    display: none;
+  }
+}
+.classic-catena-sunglasses {
+  flex-direction: row-reverse;
+  @include laptop {
+    flex-direction: row;
+  }
+}
+.classic-catena-artical {
+  width: 42.5%;
+  @include text-lg;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 30px;
+  @include laptop {
+    font-size: 28px;
+  }
+  @include ipad {
+    width: 100%;
+    margin-left: 0px;
+    justify-content: center;
+  }
+}
+.classic-catena-sunglasses > .classic-catena-artical {
+  justify-content: flex-end;
+  margin-right: 30px;
+  @include laptop {
+    justify-content: flex-start;
+    margin-right: 0;
+  }
+  @include ipad {
+    justify-content: center;
+  }
+}
+.classic-catena-articalIcon {
+  font-size: 48px;
+  margin-right: 10px;
+  @include laptop {
+    font-size: 40px;
+    margin-right: 8px;
+  }
+}
+@include ipad {
+  .classic-catena-optical {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-1.png);
+  }
+  .classic-catena-sunglasses {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2.png);
+  }
+  .classic-catena-functional {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-3.png);
+  }
+  .classic-catena-optical,
+  .classic-catena-sunglasses,
+  .classic-catena-functional {
+    width: 100%;
+    height: 134px;
+    background-size: cover;
+    object-fit: fill;
+  }
+}
+.designGlasses {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png);
+  height: 705px;
+  background-position: center;
+  @include laptop {
+    height: 452px;
+    background-position: 30% 30%;
+  }
+  @include ipad {
+    height: auto;
+  }
+}
+.design-wrap {
+  @include wrap(60px, 80px, 15px);
+  @include laptop {
+    @include wrap(40px, 56px, 39px);
+  }
+  @include ipad {
+    @include wrap(32px, 24px, 15px);
+  }
+}
+.design-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 72px;
+  line-height: 108px;
+  font-weight: bold;
+  @include laptop {
+    font-size: 32px;
+    line-height: 25px;
+    flex-wrap: wrap;
+  }
+}
+.design-double,
+.design-youth {
+  width: 540px;
+  height: 455px;
+  background-size: cover;
+  @include desktop {
+    width: 48%;
+  }
+  @include laptop {
+    width: 330px;
+    height: 278px;
+  }
+  @include ipad {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+}
+.design-double {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-8.png);
+}
+.design-youth {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-9.png);
+}
+.design-curtain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(256, 256, 256, 0.5);
+  height: 455px;
+  color: $primary;
+  @include laptop {
+    height: 278px;
+  }
+  @include ipad {
+    height: 291px;
+  }
+}
+.recommened {
+  @include wrap(60px, 80px, 0px);
+  @include laptop {
+    @include wrap(40px, 24px, 0px);
+  }
+  @include ipad {
+    padding-top: 32px;
+  }
+}
+.recommened-cards {
+  display: flex;
+  color: $dark;
+  @include laptop {
+    flex-wrap: wrap;
+  }
+}
+.recommened-card {
+  width: 25%;
+  padding: 0 15px;
+  @include mb-rwd(0px, 32px, 16px);
+  @include laptop {
+    width: 50%;
+  }
+  @include ipad {
+    width: 100%;
+  }
+}
+.card {
+  box-shadow: 0px 2px 6px #00000029;
+}
+.card-img > img {
+  display: block;
+  width: 100%;
+  object-fit: fill;
+  height: 256px;
+}
+.card-artical {
+  padding: 16px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include laptop {
+    padding: 16px 24px;
+  }
+}
+.card-customer > p {
+  @include text;
+}
+.card-customer,
+.card-date {
+  @include text-sm;
+}
+.card-date {
+  color: #707070;
+}
+.contact {
+  background-color: $bgc;
+}
+.contact-wrap {
+  @include wrap(60px, 80px, 205px);
+  color: #000;
+  @include laptop {
+    @include wrap(40px, 56px, 159px);
+  }
+  @include ipad {
+    @include wrap(30px, 40px, 15px);
+  }
+}
+.contact-title {
+  @include mb-rwd(24px, 24px, 20px);
+}
+.contact-wrap > p {
+  font-size: 20px;
+  line-height: 30px;
+  @include mb-rwd(20px, 16px, 8px);
+}
+form {
+  @include text;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+.textarea {
+  width: 100%;
+  border: 1px solid #000;
+  @include mb-rwd(16px, 8px, 8px);
+  @include text;
+  @include laptop {
+    @include text-sm;
+  }
+}
+input[type="text"] {
+  padding: 12px 16px 14px 16px;
+}
+input[type="tel"],
+input[type="email"] {
+  padding: 14px 16px 15px 16px;
+}
+.textarea {
+  height: 136px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+.checkbox {
+  display: flex;
+  margin-right: 4px;
+  @include mb-rwd(24px, 20px, 20px);
+}
+.checkbox > p {
+  @include text;
+  @include laptop {
+    @include text-sm;
+  }
+}
+button {
+  background-color: $primary;
+  color: #fff;
+  border: none;
+  @include text;
+  padding: 16px 143px;
+  @include laptop {
+    @include text-sm;
+    padding: 10px 77px;
+  }
+}
+.button-wrap {
+  text-align: center;
+}
