@@ -7,15 +7,22 @@
     background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-sm.png);
     height: 394px;
   }
-}
-.banner-wrap {
-  padding-right: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 840px;
-  @include ipad {
-    height: 394px;
+  &-wrap {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 840px;
+    @include ipad {
+      height: 394px;
+    }
+  }
+  &-title {
+    & span {
+      font-size: 36px;
+      line-height: 54px;
+      @include text-rwd(20, 30, 16);
+    }
   }
 }
 h3 {
@@ -23,76 +30,66 @@ h3 {
   line-height: 96px;
   font-weight: bold;
   text-align: right;
-  @include laptop {
-    @include text-lg;
-  }
-  @include ipad {
-    font-size: 32px;
-  }
+  @include text-rwd(48, 72, 32);
 }
-.banner-title span {
-  font-size: 36px;
-  line-height: 54px;
-  @include laptop {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  @include ipad {
-    font-size: 16px;
-  }
-}
-.prosfession {
+.profession {
   background-color: $bgc;
-}
-.profession-wrap {
-  @include wrap(60px, 80px, 0px);
-  @include laptop {
-    padding-bottom: 0;
+  &-wrap {
+    @include wrap(60px, 80px, 0px);
+    @include laptop {
+      padding-bottom: 0;
+    }
+    @include ipad {
+      @include wrap(32px, 8px, 0px);
+    }
   }
-  @include ipad {
-    @include wrap(32px, 8px, 0px);
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include laptop {
+      justify-content: space-around;
+    }
   }
-}
-.profession-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  @include laptop {
-    justify-content: space-around;
+  &-card {
+    width: 25%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & p {
+      text-align: left;
+      font-size: 16px;
+      line-height: 24px;
+      @include mb-rwd(0px, 56px, 32px);
+    }
+    @include laptop {
+      width: 35%;
+      padding: 0 10px;
+    }
+    @include ipad {
+      width: 100%;
+      padding: 0 60px;
+    }
+  }
+  &-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+  }
+  &-cardTitle {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 8px;
+    font-weight: bold;
   }
 }
 h2 {
   text-align: center;
   font-weight: bold;
-  @include text-lg;
-  @include laptop {
-    font-size: 32px;
-    line-height: 48px;
-  }
-  @include ipad {
-    font-size: 24px;
-    line-height: 48px;
-  }
-}
-.profession-card {
-  width: 25%;
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include laptop {
-    width: 35%;
-    padding: 0 10px;
-  }
-  @include ipad {
-    width: 100%;
-    padding: 0 60px;
-  }
-}
-.profession-img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 16px;
+  font-size: 48px;
+  line-height: 72px;
+  @include text-rwd(32, 48, 24);
 }
 .img-dollar,
 .img-clock,
@@ -103,17 +100,6 @@ h2 {
 }
 .img-glasses {
   width: 100px;
-}
-.profession-cardTitle {
-  font-size: 24px;
-  line-height: 36px;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-.profession-card > p {
-  @include text;
-  text-align: left;
-  @include mb-rwd(0px, 56px, 32px);
 }
 .classic {
   @include wrap(60px, 48px, 15px);
@@ -126,15 +112,15 @@ h2 {
 }
 .classic-catena {
   color: $primary;
-}
-.classic-catena li {
-  display: flex;
-  @include mb-rwd(32px, 8px, 8px);
-}
-.classic-catena li > img {
-  width: 57.5%;
-  @include ipad {
-    display: none;
+  & li {
+    display: flex;
+    @include mb-rwd(32px, 8px, 8px);
+    & img {
+      width: 57.5%;
+      @include ipad {
+        display: none;
+      }
+    }
   }
 }
 .classic-catena-sunglasses {
@@ -142,30 +128,30 @@ h2 {
   @include laptop {
     flex-direction: row;
   }
+  & P {
+    @include me-rwd(30px,8px)
+  }
 }
 .classic-catena-artical {
   width: 42.5%;
-  @include text-lg;
   font-weight: bold;
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  margin-left: 30px;
-  @include laptop {
-    font-size: 28px;
-  }
+  @include ms-rwd(30px, 0px);
+  font-size: 48px;
+  line-height: 72px;
+  @include text-rwd(28, 72);
   @include ipad {
     width: 100%;
-    margin-left: 0px;
     justify-content: center;
   }
 }
 .classic-catena-sunglasses > .classic-catena-artical {
   justify-content: flex-end;
-  margin-right: 30px;
+  @include ms-rwd(30px, 0px);
   @include laptop {
     justify-content: flex-start;
-    margin-right: 0;
   }
   @include ipad {
     justify-content: center;
@@ -298,56 +284,62 @@ h2 {
 }
 .card {
   box-shadow: 0px 2px 6px #00000029;
-}
-.card-img > img {
-  display: block;
-  width: 100%;
-  object-fit: fill;
-  height: 256px;
-}
-.card-artical {
-  padding: 16px;
-  height: 204px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @include laptop {
-    padding: 16px 24px;
+  &-img {
+    img {
+      display: block;
+      width: 100%;
+      object-fit: fill;
+      height: 256px;
+    }
   }
-}
-.card-customer > p {
-  @include text;
-}
-.card-customer,
-.card-date {
-  @include text-sm;
-}
-.card-date {
-  color: #707070;
+  &-artical {
+    padding: 16px;
+    height: 204px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include laptop {
+      padding: 16px 24px;
+    }
+  }
+  &-customer {
+    font-size: 14px;
+    line-height: 21px;
+    & p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &-date {
+    font-size: 14px;
+    line-height: 21px;
+    color: #707070;
+  }
 }
 .contact {
   background-color: $bgc;
-}
-.contact-wrap {
-  @include wrap(60px, 80px, 205px);
-  color: #000;
-  @include laptop {
-    @include wrap(40px, 56px, 159px);
+  &-wrap {
+    @include wrap(60px, 80px, 205px);
+    color: #000;
+    @include laptop {
+      @include wrap(40px, 56px, 159px);
+    }
+    @include ipad {
+      @include wrap(30px, 40px, 15px);
+    }
+    & p {
+      font-size: 20px;
+      line-height: 30px;
+      @include mb-rwd(20px, 16px, 8px);
+    }
   }
-  @include ipad {
-    @include wrap(30px, 40px, 15px);
+  &-title {
+    @include mb-rwd(24px, 24px, 20px);
   }
-}
-.contact-title {
-  @include mb-rwd(24px, 24px, 20px);
-}
-.contact-wrap > p {
-  font-size: 20px;
-  line-height: 30px;
-  @include mb-rwd(20px, 16px, 8px);
 }
 form {
-  @include text;
+  font-size: 16px;
+  line-height: 24px;
 }
 input[type="text"],
 input[type="tel"],
@@ -356,9 +348,11 @@ input[type="email"],
   width: 100%;
   border: 1px solid #000;
   @include mb-rwd(16px, 8px, 8px);
-  @include text;
+  font-size: 16px;
+  line-height: 24px;
   @include laptop {
-    @include text-sm;
+    font-size: 14px;
+    line-height: 21px;
   }
 }
 input[type="text"] {
@@ -377,23 +371,27 @@ input[type="email"] {
   display: flex;
   margin-right: 4px;
   @include mb-rwd(24px, 20px, 20px);
-}
-.checkbox > p {
-  @include text;
-  @include laptop {
-    @include text-sm;
+  & p {
+    font-size: 16px;
+    line-height: 24px;
+    @include text-rwd(14px, 21px);
   }
 }
 button {
   background-color: $primary;
   color: #fff;
   border: none;
-  @include text;
+  font-size: 16px;
+  line-height: 24px;
+  @include text-rwd(14, 21);
   padding: 16px 143px;
   @include laptop {
-    @include text-sm;
     padding: 10px 77px;
   }
+}
+button:hover {
+  background-color:orange;
+  outline: 1px solid #fff;
 }
 .button-wrap {
   text-align: center;

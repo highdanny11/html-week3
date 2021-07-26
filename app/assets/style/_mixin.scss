@@ -16,31 +16,28 @@
 @mixin wrap($top, $bottom, $x) {
   padding: $top $x $bottom $x;
 }
-@mixin text {
-  font-size: 16px;
-  line-height: 24px;
-}
-@mixin text-sm {
-  font-size: 14px;
-  line-height: 21px;
-}
-@mixin text-lg {
-  font-size: 48px;
-  line-height: 72px;
-}
 @mixin d-none {
   display: none;
 }
-@mixin me-rwd($right,$rightL,$rightI) {
-  margin-right: $right;
+@mixin ms-rwd($left,$leftL:$left,$leftI:$leftL) {
+  margin-left: $left;
   @include laptop {
-    margin-bottom: $rightL;
+    margin-left: $leftL;
   }
   @include ipad {
-    margin-bottom: $rightI;
+    margin-left: $leftI;
   }
 }
-@mixin mb-rwd($desktop, $laptop, $iapd) {
+@mixin me-rwd($right,$rightL:$right,$rightI:$rightL) {
+  margin-right: $right;
+  @include laptop {
+    margin-right: $rightL;
+  }
+  @include ipad {
+    margin-right: $rightI;
+  }
+}
+@mixin mb-rwd($desktop, $laptop:$desktop, $iapd:$laptop) {
   margin-bottom: $desktop;
   @include laptop {
     margin-bottom: $laptop;
@@ -49,7 +46,7 @@
     margin-bottom: $iapd;
   }
 }
-@mixin mt-rwd($desktop, $laptop, $iapd) {
+@mixin mt-rwd($desktop, $laptop:$desktop, $iapd:$laptop) {
   margin-top: $desktop;
   @include laptop {
     margin-top: $laptop;
@@ -58,13 +55,13 @@
     margin-top: $iapd;
   }
 }
-@mixin text-rwd($fzL,$lhL,$fzI,$lhI) {
+@mixin text-rwd($fzL,$lhL,$fzI:$fzL,$lhI:$lhL) {
   @include laptop {
-    font-size: $fzL;
-    line-height: $lhL;
+    font-size: $fzL+px;
+    line-height: $lhL+px;
   }
   @include ipad {
-    font-size: $fzI;
-    line-height: $lhI;
+    font-size: $fzI+px;
+    line-height: $lhI+px;
   }
 }

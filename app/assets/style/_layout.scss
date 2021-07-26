@@ -41,35 +41,37 @@
     width: 100%;
     flex-wrap: wrap;
   }
-}
-.header-list li > a {
-  color: $light;
-  display: block;
-  padding: 10px 32px;
-  text-decoration: none;
-  @include laptop {
-    padding: 0 20px;
+  & li {
+    @include ipad {
+      text-align: center;
+      width: 50%;
+      outline: 1px solid $light;
+    }
+    & a {
+      color: $light;
+      display: block;
+      padding: 10px 32px;
+      text-decoration: none;
+      @include laptop {
+        padding: 0 20px;
+      }
+      @include ipad {
+        padding: 8px 0;
+      }
+    }
   }
-  @include ipad {
-    padding: 8px 0;
-  }
-}
-.header-list li > a:hover {
-  color: orange;
-  @include ipad {
-    background-color: orange;
-    color: $light;
-  }
-}
-@include ipad {
-  .header-list > li {
-    text-align: center;
-    width: 50%;
-    outline: 1px solid $light;
+  & li:hover {
+    & a {
+      color: orange;
+      @include ipad {
+        background-color: orange;
+        color: $light;
+      }
+    }
   }
 }
 .footer {
-  background-color:  $primary;
+  background-color: $primary;
   padding-bottom: 39px;
   padding-top: 32px;
   color: $light;
@@ -104,34 +106,60 @@
   @include ipad {
     display: none;
   }
-}
-.footer-list li > a {
-  color: $light;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none;
-  display: block;
-  padding-right: 48px;
-  @include laptop {
-    padding-right: 40px;
+  & li a {
+    color: $light;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    display: block;
+    padding-right: 48px;
+    @include laptop {
+      padding-right: 40px;
+    }
   }
 }
 .footer-contact-rwd {
-  display: none;
   @include ipad {
-    display: block;
     padding-bottom: 24px;
+  }
+  & li {
+    display: flex;
+    align-items: center;
+    & a {
+      @include ipad {
+        color: $light;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 30px;
+        padding-bottom: 6px;
+      }
+    }
+  }
+  & img {
+    display: block;
   }
 }
 .footer-icons {
   display: flex;
-}
-.footer-icons li > a {
-  display: block;
-  padding-left: 32px;
-  @include laptop {
-    padding-left: 24px;
+  & li a {
+    display: block;
+    padding-left: 32px;
+    @include laptop {
+      padding-left: 24px;
+    }
+    & img {
+      transition: all 0.5s ease;
+      @include laptop {
+        width: 24px;
+        height: 24px;
+        
+      }
+    }
   }
+  & li a:hover img {
+    transform: scale(1.2);
+  }
+  
 }
 .footer-contact {
   border-bottom: 1px solid $light;
@@ -139,62 +167,57 @@
   @include laptop {
     padding-bottom: 20px;
   }
-  @include ipad {
-    display: none;
+  &-phone {
+    margin-right: 22px;
+    @include laptop {
+      width: 18px;
+      height: 18px;
+      margin-right: 11px;
+    }
   }
-}
-.footer-contact li,
-.footer-contact-rwd li {
-  display: flex;
-  align-items: center;
-}
-.footer-contact li img,
-.footer-contact-rwd li img {
-  display: block;
-}
-.footer-contact li > a {
-  color: $light;
-  text-decoration: none;
-  font-size: 36px;
-  line-height: 54px;
-  font-family: Roboto, sans-serif;
-  @include laptop {
-    font-size: 20px;
-    line-height: 30px;
+  &-mail {
+    width: 40px;
+    height: 32px;
+    margin-right: 20px;
+    @include laptop {
+      width: 20px;
+      height: 16px;
+      margin-right: 8px;
+    }
   }
-}
-.footer-cotact-phone {
-  margin-right: 22px;
-  @include laptop {
-    width: 18px;
-    height: 18px;
-    margin-right: 11px;
-  }
-}
-.footer-cotact-mail {
-  width: 40px;
-  height: 32px;
-  margin-right: 20px;
-  @include laptop {
-    width: 20px;
-    height: 16px;
-    margin-right: 8px;
+  & li {
+    display: flex;
+    align-items: center;
+    & a {
+      color: $light;
+      text-decoration: none;
+      font-size: 36px;
+      line-height: 54px;
+      font-family: Roboto, sans-serif;
+      @include laptop {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    & img {
+      display: block;
+    }
   }
 }
 .footer-remarks {
   display: flex;
   justify-content: space-between;
-  margin-top: 32px;
   font-size: 16px;
   line-height: 24px;
-  @include laptop {
-    margin-top: 36px;
-  }
+  @include text-rwd(16, 24, 14, 21);
+  @include mt-rwd(32px, 36px, 16px);
   @include ipad {
     display: block;
-    font-size: 14px;
-    line-height: 21px;
-    margin-top: 16px;
+  }
+  & p {
+    @include ipad {
+      margin-bottom: 8px;
+    }
   }
 }
 .footer-policy {
@@ -204,26 +227,10 @@
   @include ipad {
     display: block;
   }
-}
-@include laptop {
-  .footer-icons li > a img {
-    width: 24px;
-    height: 24px;
-  }
-}
-@include ipad {
-  .footer-contact-rwd li > a {
-    color: $light;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 30px;
-    padding-bottom: 6px;
-  }
-  .footer-remarks > p {
-    margin-bottom: 8px;
-  }
-  .footer-policy > li {
-    margin-bottom: 8px;
+  & li {
+    @include ipad {
+      margin-bottom: 8px;
+    }
   }
 }
 .contentWrap {

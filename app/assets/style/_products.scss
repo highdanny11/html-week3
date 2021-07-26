@@ -104,12 +104,12 @@
   font-family: Roboto;
   font-size: 42px;
   line-height: 63px;
-  @include text-rwd(32px, 48px, 20px, 48px);
+  @include text-rwd(32, 48, 20, 48);
 }
 .products-title > span {
   font-size: 32px;
   line-height: 48px;
-  @include text-rwd(24px, 36px, 16px, 36px);
+  @include text-rwd(24, 36, 16, 36);
 }
 .products {
   display: flex;
@@ -171,7 +171,7 @@
 .product-price {
   font-size: 24px;
   line-height: 36px;
-  @include text-rwd(24px, 30px, 16px, 30px);
+  @include text-rwd(24, 30, 16);
 }
 .product-price {
   color: $primary;
