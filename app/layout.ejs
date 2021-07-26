@@ -9,17 +9,10 @@
   <title>
     <%- title %>
   </title>
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'txp8mmc',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/all.css">
@@ -28,7 +21,9 @@
 <body>
   <header class="header">
     <div class="header-wrap ">
-      <a href="index.html"><h1>公司LOGO</h1></a>
+      <a href="index.html">
+        <h1>公司LOGO</h1>
+      </a>
       <ul class="header-list">
         <li><a href="Productpage1.html">系列鏡框</a></li>
         <li><a href="Location.html">門市據點</a></li>
